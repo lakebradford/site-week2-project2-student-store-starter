@@ -5,6 +5,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: row;
+  background-color: darkkhaki;
+
 }
 .app main {
   width: 100%;
@@ -13,4 +15,30 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+}
+
+
+
+#footer-div{
+  align-items: center;
+
+  padding: 30px;
+}
+
+#footer{
+  border-style: solid;
+
+  height: 300px;
+}
+
+#contact-div{
+  align-items: center;
+
+  padding: 30px;
+}
+
+#contact{
+  padding: 30px;
+  height: 300px;
 }

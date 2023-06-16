@@ -1,0 +1,14 @@
+#detail-page{
+    width: 50%;
+    height:auto;
+    text-align: center;
+    padding: 20px;
+    margin-left: 25%;
+
+
+}
+
+img{
+    border-style: solid;
+    border-radius: 4px;
+}

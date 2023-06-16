@@ -1,0 +1,16 @@
+
+.hero-container {
+    padding:60px ;
+    text-align: center;
+}
+
+#hero {
+    padding: 120px;
+    padding-top:10px;
+    background-image:url("lake.jpeg") ;
+    background-size: 100% 100%;
+    min-height: 600px;
+}
+h1{
+    font-size:100px;
+}

@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.sidebar.closed {
+    width: 60px;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    height: 100%;
+    padding: 0;
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+    background: var(--dark-blue);
+    border-right: solid 1px white;
+    background-color: blue;
+}
+
+.icon{
+    padding: 10px;
+}
