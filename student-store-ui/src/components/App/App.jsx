@@ -15,6 +15,7 @@ import ProductGrid from "../ProductGrid/ProductGrid"
 
 export default function App() {
   const [productData, setProductData] = useState([])
+  const [cartData, setCartData] = useState({})
 
   //accessing the api information and setting the information to the variable productData
   useEffect( () => {axios.get("https://codepath-store-api.herokuapp.com/store").then((response) => {
@@ -24,17 +25,17 @@ export default function App() {
   })}, [])
 
 
-
+  
   //we return our whole web page
   return (
     <div className="app">
       <BrowserRouter>
         <main>
-          <Navbar />
+        <Sidebar cartInformation = {cartData}/>
+          <Navbar/>
           <Hero />
-          <Sidebar />
           <Routes>
-            <Route path="/"  element={<Home data ={productData}/>} />
+            <Route path="/"  element={<Home data ={productData} cartData = { cartData => setCartData(cartData)}/>} />
             <Route path="/product/:id" element={<ProductDetail/>} />
           </Routes>
         </main>

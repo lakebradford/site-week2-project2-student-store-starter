@@ -3,17 +3,16 @@ import { useState } from "react"
 import "./Home.css"
 import ProductCard from "../ProductCard/ProductCard"
 import ProductGrid from "../ProductGrid/ProductGrid"
+import Sidebar from "../Sidebar/Sidebar"
 
 export default function Home(data) {
-  console.log(data.data)
 
   let result = data.data
-
-  
   const [searchedItem, setSearchedItem] = useState('')
   const [buttonCategory, setButtonCategory] = useState('all')
   const [searchedData, setSearchedData] = useState(data.data)
 
+  
 
 
   const handleInputChange = (event) =>{
@@ -22,6 +21,7 @@ export default function Home(data) {
     setButtonCategory(event.target.name)
     setSearchedItem(event.target.value)
     setButtonCategory(event.target.name)
+    
 
     //We can now filter by category and then by search
     let sortedByCategory = data.data
@@ -46,13 +46,14 @@ export default function Home(data) {
         </form>
       </div>
       <div className= "categories">
-        <button name = {"all"} onClick={handleInputChange}>All Categories</button>
-        <button name = {"food"} onClick={handleInputChange}>Food</button>
-        <button name = {"clothing"} onClick={handleInputChange}>Clothing</button>
-        <button name = {"accessories"} onClick={handleInputChange}>Accessories</button>
-        <button name = {"tech"} onClick={handleInputChange}>Tech</button>
+        <button className = "category-button" name = "all" onClick={handleInputChange}>All Categories</button>
+        <button className = "category-button" name = "food" onClick={handleInputChange}>Food</button>
+        <button className = "category-button" name = "clothing" onClick={handleInputChange}>Clothing</button>
+        <button className = "category-button" name = "accessories" onClick={handleInputChange}>Accessories</button>
+        <button className = "category-button" name = "tech" onClick={handleInputChange}>Tech</button>
       </div>
-      <ProductGrid products = {searchedData.length === 0  && searchedItem.length ===0? data.data: searchedData}  />
+      <ProductGrid products = {searchedData.length === 0  && searchedItem.length ===0? data.data: searchedData} cartData = { cartData => data.cartData(cartData)}/>
+
       <div id="contact-div">
             <div id = "about">
               <h2>About Me</h2>
@@ -71,9 +72,6 @@ export default function Home(data) {
             <br></br><br></br>
               Address : 123 Fake Street, San Francisco, CA
             <br></br><br></br>
-              
-
-
           </div>
         </div>
           <div class="footer-basic">

@@ -1,12 +1,39 @@
 .product-card{
     width: 250px;
-    height: 350px;
+    height: 400px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 30px;
     margin-bottom: 50px;
 }
 img {
     width: 150px;
     height: 200px;
+    border-radius: solid;
+    border-color: black;
 }
+
+span {cursor:pointer; }
+.number{
+    margin:100px;
+}
+.minus, .plus{
+    width:20px;
+    height:20px;
+    background:#f2f2f2;
+    border-radius:4px;
+    padding:8px 5px 8px 5px;
+    border:1px solid #ddd;
+    vertical-align: middle;
+    text-align: center;
+
+}
+input{
+    height:34px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
+    border:1px solid #ddd;
+    border-radius:4px;
+    vertical-align: middle;
+} 
