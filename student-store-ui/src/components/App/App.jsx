@@ -18,7 +18,7 @@ export default function App() {
   const [cartData, setCartData] = useState({})
 
   //accessing the api information and setting the information to the variable productData
-  useEffect( () => {axios.get("https://codepath-store-api.herokuapp.com/store").then((response) => {
+  useEffect( () => {axios.get("http://localhost:3001/store").then((response) => {
     setProductData(response.data.products)
   }).catch((error) => {
     console.log(error);
