@@ -1,0 +1,29 @@
+
+.cart-item{
+    margin-top: 3px;
+    background-color: white;
+    border-radius: 8px;
+    width: auto;
+}
+
+.payment{
+
+    width: 300px;
+}
+.sidebar-title{
+    color: white;
+}
+#cart-total{
+    color: white;
+    
+}
+
+#reciept-div{
+    border-radius: 8px;
+    background-color: white;
+}
+
+#reciept-title{
+    border-style: solid;
+    border-color: black;
+}
